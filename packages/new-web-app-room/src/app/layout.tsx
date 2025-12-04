@@ -1,20 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThirdwebProvider } from "@/components/providers/thirdweb-provider";
+import { NeuralBackground } from "@/components/layout/neural-background";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Build anything from a chat",
-  description: "Turn chats into apps. Prompt. Ship. Repeat.",
+  title: "DeFiGuard AI - Smart Contract Security Auditor",
+  description: "AI-powered smart contract vulnerability analysis for NullShot Hacks Season 0 Track 1b",
+  keywords: ["DeFi", "Smart Contract", "Security", "AI", "Audit", "Blockchain", "Web3"],
+  authors: [{ name: "DeFiGuard AI Team" }],
+  openGraph: {
+    title: "DeFiGuard AI - Smart Contract Security Auditor",
+    description: "AI-powered smart contract vulnerability analysis",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -23,12 +27,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className="dark">
+      <body className={`${inter.variable} font-sans antialiased`}>
+        <NeuralBackground />
+        <ThirdwebProvider>
+          {children}
+        </ThirdwebProvider>
       </body>
     </html>
   );
 }
+

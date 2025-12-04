@@ -1,7 +1,8 @@
 {
-  "name": "0a4c976e-f13d-4ef8-9235-6391e101d63c",
+  "name": "defiguard-ai",
   "version": "0.1.0",
   "private": true,
+  "description": "DeFiGuard AI - Smart Contract Security Auditor for NullShot Hacks Season 0 Track 1b",
   "scripts": {
     "dev": "next dev --turbopack -p 8000",
     "build": "next build",
@@ -14,9 +15,24 @@
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.7.1",
+    "@google/generative-ai": "^0.21.0",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-dropdown-menu": "^2.1.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.1",
+    "@radix-ui/react-toast": "^1.2.2",
+    "@thirdweb-dev/react": "^4.9.4",
+    "@thirdweb-dev/sdk": "^4.0.98",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.460.0",
     "next": "15.4.6",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "recharts": "^2.13.3",
+    "tailwind-merge": "^2.5.4",
+    "thirdweb": "^5.67.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
