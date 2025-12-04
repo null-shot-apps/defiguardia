@@ -32,6 +32,13 @@ const config: Config = {
         glass: {
           white: 'rgba(255, 255, 255, 0.05)',
           border: 'rgba(255, 255, 255, 0.1)',
+        },
+        severity: {
+          critical: '#ff0040',
+          high: '#ff6b35',
+          medium: '#ffa500',
+          low: '#32cd32',
+          info: '#00bfff',
         }
       },
       backgroundImage: {
@@ -113,3 +120,4 @@ const config: Config = {
 }
 
 export default config
+
